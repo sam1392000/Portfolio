@@ -1,48 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import freelacing from "../Assets/freelancing.jpg";
 import medistore from "../Assets/medistore.jpg";
 import recordmanagment from "../Assets/recordmanagement.jpg";
 import charles from "../Assets/charles.jpg";
 import extension from "../Assets/extensions.jpg";
-import { Modal } from "antd";
+
 import vr from "../Assets/vr.jpg";
 
 const Projects = () => {
-  const [title, settitle] = useState("");
-  const [idea, setidea] = useState("");
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const showModal = () => {
-    setIsModalVisible(true);
-    console.log(isModalVisible);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
-
   return (
     <div className="projects_container">
-      <Modal
-        title="Hii"
-        visible={isModalVisible}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>hiiioiiii</p>
-      </Modal>
-
       <h1 className="project_title">Projects</h1>
       <div className="cards_row">
         <div className="card">
           <img src={freelacing} alt="freelancing" />
           <h2 className="white ml-3">Assit To Freelancing</h2>
-          <button className="learn_more" onClick={showModal}>
-            Learn More
-          </button>
+          <button className="learn_more">Learn More</button>
         </div>
         <div className="card">
           <img src={medistore} alt="medistore" className="img" />
